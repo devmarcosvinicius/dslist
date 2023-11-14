@@ -1,5 +1,6 @@
 package com.marcosviniciusdev.services;
 
+import com.marcosviniciusdev.dto.GameMinDTO;
 import com.marcosviniciusdev.entities.Game;
 import com.marcosviniciusdev.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,9 @@ public class GameService {
     @Autowired
     private GameRepository gameRepository;
 
-    public List<Game> findAll() {
-        return gameRepository.findAll();
+    public List<GameMinDTO> findAll() {
+        List<Game> result = gameRepository.findAll();
+        return result.stream().map(GameMinDTO::new).toList();
     }
 
 }
