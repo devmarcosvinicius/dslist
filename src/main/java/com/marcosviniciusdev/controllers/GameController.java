@@ -1,7 +1,6 @@
 package com.marcosviniciusdev.controllers;
 
 import com.marcosviniciusdev.dto.GameMinDTO;
-import com.marcosviniciusdev.entities.Game;
 import com.marcosviniciusdev.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
