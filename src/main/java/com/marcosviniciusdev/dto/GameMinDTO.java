@@ -29,7 +29,7 @@ public class GameMinDTO {
         return title;
     }
 
-    public String getYear() {
+    public Integer getYear() {
         return year;
     }
 
