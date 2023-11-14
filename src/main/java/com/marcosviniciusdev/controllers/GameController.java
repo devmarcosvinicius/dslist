@@ -1,5 +1,6 @@
 package com.marcosviniciusdev.controllers;
 
+import com.marcosviniciusdev.dto.GameMinDTO;
 import com.marcosviniciusdev.entities.Game;
 import com.marcosviniciusdev.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class GameController {
     private GameService gameService;
 
     @GetMapping
-    public List<Game> findAll() {
+    public List<GameMinDTO> findAll() {
         return gameService.findAll();
     }
 
